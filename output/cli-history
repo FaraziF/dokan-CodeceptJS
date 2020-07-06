@@ -1,0 +1,35 @@
+
+
+<<< Recorded commands on Sat Jul 04 2020 16:28:07 GMT+0600 (Bangladesh Standard Time)
+I.click('span#select2-product_cat-container.select2-selection__rendered');
+I.selectOption('#product_cat', 'cloth');
+I.click('#dokan-create-new-product-btn');
+
+<<< Recorded commands on Sat Jul 04 2020 17:01:34 GMT+0600 (Bangladesh Standard Time)
+I.click({ css :'.dokan-single-seller:nth-child(1) .store-content a'})
+I.click('//li[2]/a/img');
+I.click('Add to cart');
+I.click('Add to cart');
+I.amOnPage('/store-listing/');
+I.click('Vendor Info');
+I.click('.details');
+I.click('.details a');
+I.click('//li[2]/a/img');
+I.click('//li[1]/a/img');
+I.click('//li[2]/a/img');
+I.click('Add to cart');
+I.amOnPage('/cart');
+I.click('Proceed to checkout');
+I.click('Place order');
+
+<<< Recorded commands on Sat Jul 04 2020 17:48:56 GMT+0600 (Bangladesh Standard Time)
+I.click({ css : '.dokan-single-seller:nth-child(2) .store-content a'});
+I.click('//li[1]/a/img');
+I.click('Add to cart');
+I.amOnPage('store-listing/');
+I.click({ css : '.dokan-single-seller:nth-child(3) .store-content a'});
+I.click('//li[1]/a/img');
+I.click('Add to cart');
+
+<<< Recorded commands on Sat Jul 04 2020 18:35:00 GMT+0600 (Bangladesh Standard Time)
+I.moveCursorTo('//td[1]');

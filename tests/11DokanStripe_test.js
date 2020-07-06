@@ -1,6 +1,6 @@
 Feature('Dokan Stripe Payments');
 
-/*
+
 Scenario('Admin settings with dokan stripe setup', (I) => {
 	I.amOnPage('/wp-admin');
 	I.fillField('Username or Email Address', 'Dokan_Admin');
@@ -43,7 +43,7 @@ Scenario('Vendor connect with dokan stripe', (I) => {
  	I.waitUrlEquals('dashboard/settings/payment/');
  	I.see('Your account is connected with Stripe');
 });
-*/
+
 Scenario('Customer payment with dokan stripe', (I) => {
  	// I.loginAsCustomer();
  	I.amOnPage('/my-account/');
