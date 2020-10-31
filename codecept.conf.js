@@ -1,11 +1,15 @@
 const { setHeadlessWhen } = require('@codeceptjs/configure');
+// const { setHeadlessWhen, setWindowSize } = require('@codeceptjs/configure');
 
+// setHeadlessWhen(process.env.HEADLESS); // enables headless mode when HEADLESS environment variable exists
 // turn on headless mode when running with HEADLESS=true environment variable
 // HEADLESS=true npx codecept run
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-  tests: 'tests/*_test.js',
+  // tests: 'tests/**/*_test.js',
+  tests: 'tests/*/*_test.js',
+  // tests: 'tests/*_test.js',
   output: './output',
   helpers: {
     WebDriver: {
@@ -16,7 +20,18 @@ exports.config = {
          "script": 60000,
          "page load": 10000
        },
+       desiredCapabilities: {
+        chromeOptions: {
+          args: [ "--headless", "--disable-gpu", "--no-sandbox" ]
+        }
+      },
     }
+    //  Puppeteer: {
+    //   url: "https://dokan.ajaira.website/",
+    //   show: true,
+    //   waitForNavigation: "networkidle0",
+    //   windowSize: '1200x1880',
+    // }
   },
   include: {
     I: './steps_file.js',

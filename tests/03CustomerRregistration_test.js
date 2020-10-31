@@ -1,6 +1,6 @@
 var faker = require('faker');
 
-Feature('03CustomerRregistration');
+Feature('03 Customer Rregistration');
 
 Scenario('test something', (I) => {
     I.amOnPage('/my-account/');

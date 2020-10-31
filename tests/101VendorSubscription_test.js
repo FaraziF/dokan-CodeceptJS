@@ -1,5 +1,5 @@
 Feature('Vendor Subscription');
-/*
+/* 
 Scenario('Admin create Subscription Package', (I) => {
     I.loginAsAdmin();
         I.click('Dokan');

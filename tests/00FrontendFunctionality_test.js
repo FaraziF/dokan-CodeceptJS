@@ -23,7 +23,7 @@ Scenario('Preview and Explore Vendor Dashboard', (I) => {
                 I.see('Latest Announcement');
                 I.see('Reviews');
                 I.see('Products');
-/*        I.click('Products');
+        I.click('Products');
         I.seeInCurrentUrl('/dashboard/products/');
             I.waitForElement('.dokan-product-listing-area');
             I.checkError();
@@ -110,9 +110,9 @@ Scenario('Preview and Explore Vendor Dashboard', (I) => {
 		I.click('Verification');
             I.waitForElement('.dokan-settings-area');
             I.checkError();
-		I.click('Shipping');
-            I.waitForElement('.dokan-settings-area');
-            I.checkError();
+		// I.click('Shipping');
+        //     I.waitForElement('.dokan-settings-area');
+        //     I.checkError();
 		I.click('ShipStation');
             I.waitForElement('.dokan-settings-area');
             I.checkError();
@@ -126,6 +126,7 @@ Scenario('Preview and Explore Vendor Dashboard', (I) => {
             I.waitForElement('.dokan-settings-area');
             I.checkError();
 });
+
 
 Scenario('Preview and Explore Vendor Account Page', (I) => {
 		I.amOnPage('/dashboard/settings/store/');
@@ -143,13 +144,10 @@ Scenario('Preview and Explore Vendor Account Page', (I) => {
         I.checkError();
 	I.amOnPage('/shop');
         I.waitForElement('#content');
-        I.checkError();
-	/*I.amOnPage('/store-listing');
+        // I.checkError();
+	I.amOnPage('/store-listing');
 		I.waitForElement('#content');
-		// I.checkError();
-		I.dontSee('Warning');
-		I.dontSee('Fatal error');
-		I.dontSee('Notice:');
+		I.checkError();
 	// I.lastBrowserTab();*/
 
 });

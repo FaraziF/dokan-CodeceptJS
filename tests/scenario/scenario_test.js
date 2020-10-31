@@ -3,7 +3,7 @@ Feature('Basic login');
 // let loginForm ="div.col-md-6.login-form";
 
 Scenario('test something', (I) => {
-    I.amOnPage('/');
+    I.loginAsVendorTwo();
     // I.seeInCurrentUrl('ajaira');
     // I.waitForElement(loginForm);
     // // loginPages.sendForm('john@doe.com','123456');

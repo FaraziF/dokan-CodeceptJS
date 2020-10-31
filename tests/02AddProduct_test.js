@@ -6,9 +6,10 @@ Feature('Explore Frontend Functionality Works');
 
 Scenario('Vendor Add New Product', (I) => {
     // I.loginAsVendor();
-    I.loginAsVendorTwo();
+    I.loginAsVendor();
     I.amOnPage('/dashboard/products/');
     I.click('Add new product');
+     // pause();
       // Add galeery photo
         // I.click('.dokan-product-gallery');
         // I.click('a.add-product-images');
@@ -20,15 +21,18 @@ Scenario('Vendor Add New Product', (I) => {
         // I.click('form .add-product-images');
         // I.click('//*[@id="__attachments-view-119"]/li[3]');
         // I.click('Add to gallery');
-    I.fillField('post_title','Green Cap');
+        //End gallery script
+    I.fillField('post_title','Green Cap 20');
     I.fillField('_regular_price','300');
     I.fillField('_sale_price','250');
     I.click('Schedule');
     I.fillField('_sale_price_dates_from','2020-06-01');
     I.fillField('_sale_price_dates_to','2020-12-30');
     I.wait(2);
-    I.selectOption('#product_cat', 'cloth');
+    I.attachFile('.dokan-feat-image-btn', '/data/images.jpeg');
+    I.selectOption('#product_cat', 'c1');
     I.click('#dokan-create-new-product-btn');
     I.see('Edit Product');
     I.see('View Product');
+
 });

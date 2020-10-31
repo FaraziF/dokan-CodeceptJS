@@ -161,9 +161,33 @@ module.exports = function() {
         this.click('#dokan-create-new-product-btn');
         this.see('Edit Product');
         // I.see('View Product');
-
     },    
-
-
+    stripePayment: function () {
+      this.checkOption('Dokan Credit card (Stripe)');
+          this.pressKey('Tab');
+          this.pressKey('Tab');
+          this.wait(5);
+          this.type('4242424242424242');
+          this.wait(2);
+          this.type('12');
+          this.wait(2);
+          this.type('21');
+          this.wait(2);
+          this.type('121');
+          this.wait(2);
+    },
+    wirecardCreditCardPayment: function () {
+      this.checkOption('Wirecard Credit Card');
+          this.pressKey('Tab');
+          this.wait(5);
+          this.fillField('dokan-moip-connect-card-number', '4012001037141112');
+          this.wait(2);
+          this.fillField('dokan-moip-connect-card-expiry', '1221');
+          this.wait(2);
+          this.fillField('dokan-moip-connect-card-cvc', '121');
+          this.wait(2);
+          this.fillField('#billing_cpf', '122323');
+          this.wait(2);
+    },
   });
 }

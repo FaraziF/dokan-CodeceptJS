@@ -1,4 +1,4 @@
-Feature('200GlobalFlatCommission');
+Feature('203 All Commission');
 
 Scenario('test something', (I) => {
 
